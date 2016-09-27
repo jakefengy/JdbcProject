@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JdbcModule:war">
+    <output-path>$PROJECT_DIR$/JdbcModule/target</output-path>
+    <root id="archive" name="hello-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="JdbcModule:war exploded" />
+    </root>
+  </artifact>
+</component>
