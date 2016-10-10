@@ -4,7 +4,7 @@ import java.sql.*;
 
 /**
  */
-final class JdbcHelper {
+class JdbcHelper {
 
     // http://blog.csdn.net/kl28978113/article/details/52585799
 
@@ -28,7 +28,7 @@ final class JdbcHelper {
     private JdbcHelper() {
     }
 
-    public static JdbcHelper getInstance() {
+    static JdbcHelper getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
@@ -38,17 +38,20 @@ final class JdbcHelper {
 
     void free(ResultSet rs, Statement st, Connection conn) {
         try {
-            rs.close();
+            if (rs != null)
+                rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
-                st.close();
+                if (st != null)
+                    st.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
                 try {
-                    conn.close();
+                    if (conn != null)
+                        conn.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

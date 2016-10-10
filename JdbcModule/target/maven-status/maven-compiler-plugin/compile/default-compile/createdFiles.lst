@@ -1,1 +1,4 @@
+com\demo\web\jdbc\JdbcHelper$1.class
 com\demo\web\jdbc\JdbcHelper.class
+com\demo\web\jdbc\JdbcHelper$SingletonHolder.class
+com\demo\web\jdbc\StudentHelper.class
